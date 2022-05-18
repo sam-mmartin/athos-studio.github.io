@@ -120,8 +120,6 @@ var isRTL = function isRTL() {
 var resize = function resize(fn) {
   return window.addEventListener('resize', fn);
 };
-/*eslint consistent-return: */
-
 
 var isIterableArray = function isIterableArray(array) {
   return Array.isArray(array) && !!array.length;
@@ -457,11 +455,10 @@ var detectorInit = function detectorInit() {
   is.windows() && addClass(html, 'windows');
   navigator.userAgent.match('CriOS') && addClass(html, 'chrome');
 };
+
 /*-----------------------------------------------
 |   DomNode
 -----------------------------------------------*/
-
-
 var DomNode = /*#__PURE__*/ function () {
   function DomNode(node) {
     _classCallCheck(this, DomNode);
@@ -545,29 +542,25 @@ var DomNode = /*#__PURE__*/ function () {
 
   return DomNode;
 }();
-/* -------------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------------- */
 /*                                  Anchor JS                                 */
-
 /* -------------------------------------------------------------------------- */
-
-
 var anchors = new window.AnchorJS();
 anchors.options = {
   icon: '#'
 };
 anchors.add('[data-anchor]');
+
 /*-----------------------------------------------
 |                     Isotope
 -----------------------------------------------*/
-
-
 var isotopeInit = function isotopeInit() {
   var Selector = {
     ISOTOPE_ITEM: '.isotope-item',
     DATA_ISOTOPE: '[data-isotope]',
     DATA_FILTER: '[data-filter]',
-    DATA_FILER_NAV: '[data-filter-NAV]'
+    DATA_FILTER_NAV: '[data-filter-nav]'
   };
   var DATA_KEY = {
     ISOTOPE: 'isotope'
@@ -581,7 +574,6 @@ var isotopeInit = function isotopeInit() {
     masonryItems.length && masonryItems.forEach(function (masonryItem) {
       window.imagesLoaded(masonryItem, function () {
         masonryItem.querySelectorAll(Selector.ISOTOPE_ITEM).forEach(function (item) {
-          // eslint-disable-next-line
           item.style.visibility = "visible";
         });
         var userOptions = utils.getData(masonryItem, DATA_KEY.ISOTOPE);
@@ -594,7 +586,7 @@ var isotopeInit = function isotopeInit() {
 
         var isotope = new window.Isotope(masonryItem, options); //--------- filter -----------------
 
-        var filterElement = document.querySelector(Selector.DATA_FILER_NAV);
+        var filterElement = document.querySelector(Selector.DATA_FILTER_NAV);
         filterElement === null || filterElement === void 0 ? void 0 : filterElement.addEventListener('click', function (e) {
           var item = e.target.dataset.filter;
           isotope.arrange({
@@ -611,10 +603,10 @@ var isotopeInit = function isotopeInit() {
     });
   }
 };
+
 /* --------------------------------------------------------------------------
 |                                 bg player
 --------------------------------------------------------------------------- */
-
 var bgPlayerInit = function bgPlayerInit() {
   var Selector = {
     DATA_YOUTUBE_EMBED: '[data-youtube-embed]',
@@ -731,11 +723,10 @@ var bgPlayerInit = function bgPlayerInit() {
     return adjustBackgroundRatio();
   });
 };
+
 /* --------------------------------------------------------------------------
 |                                 Sparrow Navbar
 /* -------------------------------------------------------------------------- */
-
-
 var bootstrapNavbarInit = function bootstrapNavbarInit() {
   var navbar = document.querySelector('.navbar-sparrow');
 
@@ -762,11 +753,10 @@ var bootstrapNavbarInit = function bootstrapNavbarInit() {
     });
   }
 };
+
 /* --------------------------------------------------------------------------
 |                                 Countdown
 --------------------------------------------------------------------------- */
-
-
 var countdownInit = function countdownInit() {
   var countdownElements = document.querySelectorAll('[data-countdown]');
   countdownElements.forEach(function (el) {
@@ -791,13 +781,10 @@ var countdownInit = function countdownInit() {
     }, 10);
   });
 };
-/* -------------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------------- */
 /*                                  Count Up                                  */
-
 /* -------------------------------------------------------------------------- */
-
-
 var countupInit = function countupInit() {
   if (window.countUp) {
     var countups = document.querySelectorAll('[data-countup]');
@@ -832,15 +819,13 @@ var countupInit = function countupInit() {
     });
   }
 };
+
 /*-----------------------------------------------
 |    Draw SVG
 -----------------------------------------------*/
-
 /*
   gsap
 */
-
-
 var Selector = {
   DATA_ZANIM_SVG_TRIGGER: 'data-zanim-svg-trigger',
   DATA_ZANIM_REPEAT: '[zanim-repeat]',
@@ -889,11 +874,10 @@ var drawSvgInit = function drawSvgInit() {
     return triggerSvg();
   });
 };
+
 /*-----------------------------------------------
 |   Fancynav
 -----------------------------------------------*/
-
-
 var fancyNavInit = function fancyNavInit() {
   var ClassName = {
     SHOW: 'show',
@@ -1230,11 +1214,10 @@ var fancyNavInit = function fancyNavInit() {
     }
   }
 };
+
 /*-----------------------------------------------
 |   Gooogle Map
 -----------------------------------------------*/
-
-
 function initMap() {
   var themeController = document.body;
   var $googlemaps = document.querySelectorAll('[data-gmap]');
@@ -2203,67 +2186,10 @@ function initMap() {
     });
   }
 }
-/*-----------------------------------------------
-|                     Isotope
------------------------------------------------*/
 
-
-var isotopeInit = function isotopeInit() {
-  var Selector = {
-    MASONRY_ITEM: '.masonry-item',
-    DATA_MASONRY: '[data-masonry]',
-    DATA_FILTER: '[data-filter]',
-    DATA_FILER_NAV: '[data-filter-NAV]'
-  };
-  var DATA_KEY = {
-    MASONRY: 'masonry'
-  };
-  var ClassName = {
-    ACTIVE: 'active'
-  };
-
-  if (window.Isotope) {
-    var masonryItems = document.querySelectorAll(Selector.DATA_MASONRY);
-    masonryItems.length && masonryItems.forEach(function (masonryItem) {
-      window.imagesLoaded(masonryItem, function () {
-        masonryItem.querySelectorAll('.masonry-item').forEach(function (item) {
-          // eslint-disable-next-line
-          item.style.visibility = 'visible';
-        });
-        var userOptions = utils.getData(masonryItem, DATA_KEY.MASONRY);
-        var defaultOptions = {
-          itemSelector: Selector.MASONRY_ITEM,
-          layoutMode: 'packery'
-        };
-
-        var options = window._.merge(defaultOptions, userOptions);
-
-        var isotope = new window.Isotope(masonryItem, options); //--------- filter -----------------
-
-        var filterElement = document.querySelector(Selector.DATA_FILER_NAV);
-        filterElement === null || filterElement === void 0 ? void 0 : filterElement.addEventListener('click', function (e) {
-          var item = e.target.dataset.filter;
-          isotope.arrange({
-            filter: item
-          });
-          document.querySelectorAll(Selector.DATA_FILTER).forEach(function (el) {
-            el.classList.remove(ClassName.ACTIVE);
-          });
-          e.target.classList.add(ClassName.ACTIVE);
-        }); //---------- filter end ------------
-
-        return isotope;
-      });
-    });
-  }
-};
 /* -------------------------------------------------------------------------- */
-
 /*                                 bigPicture                                 */
-
 /* -------------------------------------------------------------------------- */
-
-
 var lightboxInit = function lightboxInit() {
   if (window.BigPicture) {
     var bpItems = document.querySelectorAll('[data-bigpicture]');
@@ -2281,11 +2207,10 @@ var lightboxInit = function lightboxInit() {
     });
   }
 };
+
 /*-----------------------------------------------
 |   Cookie notice
 -----------------------------------------------*/
-
-
 var cookieNoticeInit = function cookieNoticeInit() {
   var Selector = {
     NOTICE: '.notice',
@@ -2352,11 +2277,10 @@ var cookieNoticeInit = function cookieNoticeInit() {
     utils.hasClass(el, ClassNames.HIDE) ? notice.show() : notice.hide();
   });
 };
+
 /*-----------------------------------------------
 |   Inline Player [plyr]
 -----------------------------------------------*/
-
-
 var plyrInit = function plyrInit() {
   if (window.Plyr) {
     var plyrs = document.querySelectorAll('[data-plyr]');
@@ -2374,26 +2298,20 @@ var plyrInit = function plyrInit() {
     });
   }
 };
-/* -------------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------------- */
 /*                                   Popover                                  */
-
 /* -------------------------------------------------------------------------- */
-
-
 var popoverInit = function popoverInit() {
   var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
   popoverTriggerList.map(function (popoverTriggerEl) {
     return new window.bootstrap.Popover(popoverTriggerEl);
   });
 };
-/* -------------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------------- */
 /*                                  Preloader                                 */
-
 /* -------------------------------------------------------------------------- */
-
-
 var preloaderInit = function preloaderInit() {
   var bodyElement = document.querySelector('body');
   window.imagesLoaded(bodyElement, function () {
@@ -2404,17 +2322,13 @@ var preloaderInit = function preloaderInit() {
     }, 800);
   });
 };
-/* -------------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------------- */
 /*                               Progressbar JS                               */
-
 /* -------------------------------------------------------------------------- */
-
 /*
   global ProgressBar
 */
-
-
 var progressBarInit = function progressBarInit() {
   var Selector = {
     DATA_PROGRESS_CIRCLE: '[data-progress-circle]',
@@ -2561,19 +2475,17 @@ var progressBarInit = function progressBarInit() {
   } //----------- progress line end --------------
 
 };
+
 /* --------------------------------------------------------------------------
 |                                 Rellax js
 /* -------------------------------------------------------------------------- */
-
-
 var rellaxInit = function rellaxInit() {
   return window.Rellax && new window.Rellax('[data-parallax]', {});
 };
+
 /*-----------------------------------------------
 |                  Swiper
 -----------------------------------------------*/
-
-
 var swiperInit = function swiperInit() {
   var Selector = {
     DATA_SWIPER: '[data-swiper]',
@@ -2641,13 +2553,10 @@ var swiperInit = function swiperInit() {
 
   });
 };
-/* -------------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------------- */
 /*                                   Tooltip                                  */
-
 /* -------------------------------------------------------------------------- */
-
-
 var tooltipInit = function tooltipInit() {
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
   tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -2656,13 +2565,10 @@ var tooltipInit = function tooltipInit() {
     });
   });
 };
-/* -------------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------------- */
 /*                                 Typed Text                                 */
-
 /* -------------------------------------------------------------------------- */
-
-
 var typedTextInit = function typedTextInit() {
   var typedTexts = document.querySelectorAll('[data-typed-text]');
 
@@ -2677,20 +2583,18 @@ var typedTextInit = function typedTextInit() {
     });
   }
 };
+
 /*-----------------------------------------------
 |                 Zanimation
 -----------------------------------------------*/
-
 /*
 global CustomEase, gsap
 */
-
-
 CustomEase.create('CubicBezier', '.77,0,.18,1');
+
 /*-----------------------------------------------
 |   Global Functions
 -----------------------------------------------*/
-
 var filterBlur = function filterBlur() {
   var blur = 'blur(5px)';
   var isIpadIphoneMacFirefox = (window.is.ios() || window.is.mac()) && window.is.firefox();
@@ -2961,11 +2865,10 @@ var zanimation = function zanimation(el, callback) {
 
   callback(gsap.timeline());
 };
+
 /*-----------------------------------------------
 |    Zanimation Init
 -----------------------------------------------*/
-
-
 var zanimationInit = function zanimationInit() {
   var Selector = {
     DATA_ZANIM_TRIGGER: '[data-zanim-trigger]',
@@ -3006,29 +2909,27 @@ var gsapAnimation = {
   zanimationInit: zanimationInit,
   zanimation: zanimation
 };
-/* -------------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------------- */
 /*                            Theme Initialization                            */
-
 /* -------------------------------------------------------------------------- */
-
 docReady(fancyNavInit);
-docReady(countdownInit);
-docReady(plyrInit);
+// docReady(countdownInit);
+// docReady(plyrInit);
 docReady(initMap);
-docReady(tooltipInit);
-docReady(popoverInit);
-docReady(typedTextInit);
-docReady(progressBarInit);
+// docReady(tooltipInit);
+// docReady(popoverInit);
+// docReady(typedTextInit);
+// docReady(progressBarInit);
 docReady(rellaxInit);
-docReady(countupInit);
+// docReady(countupInit);
 docReady(isotopeInit);
 docReady(zanimationInit);
 docReady(swiperInit);
 docReady(drawSvgInit);
-docReady(bgPlayerInit);
+// docReady(bgPlayerInit);
 docReady(lightboxInit);
-docReady(cookieNoticeInit);
-docReady(bootstrapNavbarInit);
+// docReady(cookieNoticeInit);
+// docReady(bootstrapNavbarInit);
 docReady(preloaderInit);
 //# sourceMappingURL=theme.js.map

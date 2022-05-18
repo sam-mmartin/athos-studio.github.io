@@ -2,24 +2,6 @@
 <html class="has-sidemenu" lang="pt-BR" dir="ltr">
 
 <head>
-  <!-- Google Tag Manager -->
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({
-        'gtm.start': new Date().getTime(),
-        event: 'gtm.js'
-      });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src =
-        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-W4RZ384');
-  </script>
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,14 +24,10 @@
     rel="stylesheet">
   <link href="assets/css/theme.min.css" rel="stylesheet" />
   <link href="assets/css/user.min.css" rel="stylesheet" />
+  <link href="assets/css/theme-user.css" rel="stylesheet" />
 </head>
 
 <body class="overflow-hidden-x">
-
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4RZ384" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-
   <!-- MENU LATERAL -->
   <nav class="fancynavbar fancynavbar-expand-lg"
     data-zanim-lg='{"from":{"opacity":1,"x":70},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}'
@@ -156,8 +134,8 @@
           <div class="swiper-slide">
             <section class="py-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
               <div class="bg-holder overlay overlay-2" style="background-image:url(assets/img/Wallpaper/1.png);">
-                <div class="yt-video" data-youtube-embed='{"videoId":"g62Q3NB0qYA","startSeconds":11,"endSeconds":53}'>
-                </div>
+                <!-- <div class="yt-video" data-youtube-embed='{"videoId":"g62Q3NB0qYA","startSeconds":11,"endSeconds":53}'>
+                </div> -->
               </div>
               <div class="container">
                 <div class="row min-vh-100 align-items-center py-8">
@@ -296,7 +274,7 @@
           </div>
         </div>
       </div><!-- end of .container-->
-    </section><!-- <section> close ============================-->
+    </section>
 
     <!-- Design de Interiores -->
     <section class="py-8 py-lg-11 text-center overflow-hidden" id="StudioBanner">
@@ -331,64 +309,85 @@
     <section id="page-portfolio">
       <div class="container">
         <ul class="nav font-sans-serif mb-2" data-filter-nav="data-filter-nav">
-          <li class="nav-item"><a class="nav-link isotope-nav active" href="#!" data-filter="*">all</a></li>
-          <li class="nav-item"><a class="nav-link isotope-nav" href="#!" data-filter=".photography">photography</a>
+          <li class="nav-item">
+            <a class="nav-link isotope-nav active" href="#!" data-filter="*">all</a>
           </li>
-          <li class="nav-item"> <a class="nav-link isotope-nav" href="#!" data-filter=".studio">studio</a></li>
-          <li class="nav-item"> <a class="nav-link isotope-nav" href="#!" data-filter=".interior">interior</a></li>
-          <li class="nav-item"> <a class="nav-link isotope-nav" href="#!" data-filter=".illustration">illustration</a>
+          <li class="nav-item">
+            <a class="nav-link isotope-nav" href="#!" data-filter=".kitchen">cozinha</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link isotope-nav" href="#!" data-filter=".decor">decoração</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link isotope-nav" href="#!" data-filter=".bathroom">banheiro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link isotope-nav" href="#!" data-filter=".movel">móveis</a>
           </li>
         </ul>
         <div class="row g-3 mt-2" id="portfolio-gallery" data-zanim-timeline="{}" data-zanim-trigger="scroll"
           data-isotope='{"layoutMode":"packery"}'>
-          <div class="col-6 col-md-3 isotope-item interior">
-            <div class="hoverbox rounded overflow-hidden" data-zanim-xs='{"animation":"zoom-in"}'><img class="w-100"
-                src="assets/img/gallery/03.jpg" alt="" />
+          <div class="col-6 col-md-3 isotope-item bathroom">
+            <div class="hoverbox rounded overflow-hidden" data-zanim-xs='{"animation":"zoom-in"}'>
+              <img class="w-100" src="assets/img/gallery/banheiro-1.jpg" alt="banheiro" />
               <div class="hoverbox-content bg-dark d-flex flex-center text-center">
                 <div class="px-4">
-                  <h5 class="text-white">Next gen web interface design</h5><a class="btn btn-outline-light btn-xs mt-3"
-                    href="pages/casestudy.html">learn more</a>
+                  <h5 class="text-white">Conheça mais dos nossos projetos</h5>
+                  <a class="btn btn-outline-light btn-xs mt-3" href="pages/casestudy.html">learn more</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-md-3 isotope-item photography"><a href="#!" data-bp=",assets/img/gallery/07-f.jpg"
-              data-bigpicture='{"gallery":"#portfolio-gallery"}' data-caption="my caption"><img
-                class="rounded w-100 fit-cover" src="assets/img/gallery/07.jpg" alt=""
-                data-zanim-xs='{"animation":"zoom-in","delay":0.1}' /></a></div>
-          <div class="col-6 col-md-3 isotope-item photography"><a href="#!" data-bp="assets/img/gallery/09-f.jpg"
-              data-bigpicture='{"gallery":"#portfolio-gallery"}' data-caption="my caption"><img
-                class="rounded w-100 fit-cover" src="assets/img/gallery/09.jpg" alt=""
-                data-zanim-xs='{"animation":"zoom-in","delay":0.7}' /></a></div>
-          <div class="col-6 col-md-3 isotope-item studio"><a href="#!" data-bp="assets/img/gallery/04-f.jpg"
-              data-bigpicture='{"gallery":"#portfolio-gallery"}' data-caption="my caption"><img
-                class="rounded w-100 fit-cover" src="assets/img/gallery/04.jpg" alt=""
-                data-zanim-xs='{"animation":"zoom-in","delay":0.4}' /></a></div>
-          <div class="col-6 col-md-3 isotope-item interior">
-            <div class="hoverbox rounded overflow-hidden" data-zanim-xs='{"animation":"zoom-in","delay":0.2}'><img
-                class="w-100 fit-cover" src="assets/img/gallery/05.jpg" alt="" />
-              <div class="hoverbox-content bg-dark d-flex flex-center text-center">
-                <div class="px-4">
-                  <h5 class="text-white">Next gen web interface design</h5><a class="btn btn-outline-light btn-xs mt-3"
-                    href="pages/casestudy.html">learn more</a>
-                </div>
-              </div>
-            </div>
+          <div class="col-6 col-md-3 isotope-item kitchen">
+            <a href="#!" data-bp=",assets/img/gallery/cozinha-1.jpg" data-bigpicture='{"gallery":"#portfolio-gallery"}'
+              data-caption="Cozinha amadeirada">
+              <img class="rounded w-100 fit-cover" src="assets/img/gallery/cozinha-1.jpg" alt="cozinha amadeirada"
+                data-zanim-xs='{"animation":"zoom-in","delay":0.1}' />
+            </a>
           </div>
-          <div class="col-6 col-md-3 isotope-item studio illustration"><a href="#!"
-              data-bp="assets/img/gallery/06-f.jpg" data-bigpicture='{"gallery":"#portfolio-gallery"}'
-              data-caption="my caption"><img class="rounded w-100 fit-cover" src="assets/img/gallery/06.jpg" alt=""
-                data-zanim-xs='{"animation":"zoom-in","delay":0.3}' /></a></div>
-          <div class="col-6 col-md-3 isotope-item photography"><a href="#!" data-bp="assets/img/gallery/10-f.jpg"
-              data-bigpicture='{"gallery":"#portfolio-gallery"}' data-caption="my caption"><img
-                class="rounded w-100 fit-cover" src="assets/img/gallery/10.jpg" alt=""
-                data-zanim-xs='{"animation":"zoom-in","delay":0.5}' /></a></div>
-          <div class="col-6 col-md-3 isotope-item illustration">
-            <div class="position-relative"><img class="rounded w-100 fit-cover" src="assets/img/gallery/01.jpg" alt=""
-                data-zanim-xs='{"animation":"zoom-in","delay":0.6}' /><a
-                class="d-flex align-items-end justify-content-end h-100 pb-3 pe-3 position-absolute bottom-0 end-0"
-                href="#!" data-bigpicture='{"ytSrc":"HbAzApdYtdw"}' data-options='{"start":1,"end":64}'><svg width="50"
-                  height="50" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 274.19 274.19"
+          <div class="col-6 col-md-3 isotope-item kitchen">
+            <a href="#!" data-bp="assets/img/gallery/cozinha-2.jpg" data-bigpicture='{"gallery":"#portfolio-gallery"}'
+              data-caption="Cozinha branca">
+              <img class="rounded w-100 fit-cover" src="assets/img/gallery/cozinha-2.jpg" alt="cozinha branca"
+                data-zanim-xs='{"animation":"zoom-in","delay":0.7}' />
+            </a>
+          </div>
+          <div class="col-6 col-md-3 isotope-item decor">
+            <a href="#!" data-bp="assets/img/gallery/cortina-1.jpg" data-bigpicture='{"gallery":"#portfolio-gallery"}'
+              data-caption="Cortina">
+              <img class="rounded w-100 fit-cover" src="assets/img/gallery/cortina-1.jpg" alt="cortina"
+                data-zanim-xs='{"animation":"zoom-in","delay":0.3}' />
+            </a>
+          </div>
+          <div class="col-6 col-md-3 isotope-item bathroom">
+            <a href="#!" data-bp="assets/img/gallery/banheiro-2.jpg" data-bigpicture='{"gallery":"#portfolio-gallery"}'
+              data-caption="Banheiro Emílio">
+              <img class="rounded w-100 fit-cover" src="assets/img/gallery/banheiro-2.jpg" alt="banheiro emilio"
+                data-zanim-xs='{"animation":"zoom-in","delay":0.3}' />
+            </a>
+          </div>
+          <div class="col-6 col-md-3 isotope-item decor">
+            <a href="#!" data-bp="assets/img/gallery/wallpaper-1.jpg" data-bigpicture='{"gallery":"#portfolio-gallery"}'
+              data-caption="Papel de parede">
+              <img class="rounded w-100 fit-cover" src="assets/img/gallery/wallpaper-1.jpg" alt="papel de parede"
+                data-zanim-xs='{"animation":"zoom-in","delay":0.3}' />
+            </a>
+          </div>
+          <div class="col-6 col-md-3 isotope-item kitchen">
+            <a href="#!" data-bp="assets/img/gallery/cozinha-3.jpg" data-bigpicture='{"gallery":"#portfolio-gallery"}'
+              data-caption="Cozinha com ripado">
+              <img class="rounded w-100 fit-cover" src="assets/img/gallery/cozinha-3.jpg" alt="Cozinha com ripado"
+                data-zanim-xs='{"animation":"zoom-in","delay":0.5}' />
+            </a>
+          </div>
+          <div class="col-6 col-md-3 isotope-item movel">
+            <div class="position-relative">
+              <img class="rounded w-100 fit-cover" src="assets/img/gallery/movel-1.jpg" alt="móveis planejados"
+                data-zanim-xs='{"animation":"zoom-in","delay":0.6}' />
+              <a class="d-flex align-items-end justify-content-end h-100 pb-3 pe-3 position-absolute bottom-0 end-0"
+                href="#!" data-bigpicture='{"vidSrc":"assets/img/gallery/boa-vista.mp4"}'
+                data-options='{"start":1,"end":30}'>
+                <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 274.19 274.19"
                   data-zanim-svg='{"duration":2,"ease":"CubicBezier","trigger":"scroll"}'>
                   <defs>
                     <style>
@@ -405,32 +404,61 @@
                     <path class="play-path"
                       d="M208.31,29.4A129.12,129.12,0,1,1,137.1,8m-1.48,170.53L199.94,137,104.07,79.46v113"></path>
                   </g>
-                </svg></a></div>
+                </svg>
+              </a>
+            </div>
           </div>
-          <div class="col-12 col-sm-6 isotope-item illustration">
+          <div class="col-12 col-sm-6 isotope-item movel">
             <div class="swiper-container theme-slider"
               data-swiper='{"autoplay":{"delay":3000},"loop":true,"slideToClickedSlide":true,"effect":"fade"}'>
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img class="w-100 fit-cover rounded" src="assets/img/gallery/11.jpg" alt="" />
+                <div class="swiper-slide">
+                  <img class="w-100 fit-cover rounded" src="assets/img/gallery/planejados-1.jpg"
+                    alt="móveis planejados" />
                 </div>
-                <div class="swiper-slide"> <img class="w-100 fit-cover rounded" src="assets/img/gallery/12.jpg"
-                    alt="" /></div>
+                <div class="swiper-slide">
+                  <img class="w-100 fit-cover rounded" src="assets/img/gallery/planejados-2.jpg"
+                    alt="móveis planejados" />
+                </div>
+                <div class="swiper-slide">
+                  <img class="w-100 fit-cover rounded" src="assets/img/gallery/planejados-3.jpg"
+                    alt="móveis planejados" />
+                </div>
+                <div class="swiper-slide">
+                  <img class="w-100 fit-cover rounded" src="assets/img/gallery/planejados-4.jpg"
+                    alt="móveis planejados" />
+                </div>
               </div>
               <div class="swiper-nav">
                 <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"> </div>
+                <div class="swiper-button-prev"></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-md-3 isotope-item interior"><a href="#!" data-bp="assets/img/gallery/02-f.jpg"
-              data-bigpicture='{"gallery":"#portfolio-gallery"}' data-caption="my caption"><img
-                class="rounded w-100 fit-cover" src="assets/img/gallery/02.jpg" alt=""
-                data-zanim-xs='{"animation":"zoom-in","delay":0.3}' /></a></div>
-          <div class="col-6 col-md-3 isotope-item photography"><a href="pages/casestudy.html"><img
-                class="rounded w-100 fit-cover" src="assets/img/gallery/08.jpg" alt=""
-                data-zanim-xs='{"animation":"zoom-in","delay":0.4}' /></a></div>
+          <div class="col-6 col-md-3 isotope-item bathroom">
+            <a href="#!" data-bp="assets/img/gallery/banheiro-3.jpg" data-bigpicture='{"gallery":"#portfolio-gallery"}'
+              data-caption="Banheiro Augusto">
+              <img class="rounded w-100 fit-cover" src="assets/img/gallery/banheiro-3.jpg" alt="banheiro augusto"
+                data-zanim-xs='{"animation":"zoom-in","delay":0.3}' />
+            </a>
+          </div>
+          <div class="col-6 col-md-3 isotope-item kitchen">
+            <a href="#!" data-bp="assets/img/gallery/cozinha-4.jpg" data-bigpicture='{"gallery":"#portfolio-gallery"}'
+              data-caption="Cozinha integrada">
+              <img class="rounded w-100 fit-cover" src="assets/img/gallery/cozinha-4.jpg" alt="Cozinha integrada"
+                data-zanim-xs='{"animation":"zoom-in","delay":0.5}' />
+            </a>
+          </div>
         </div>
-      </div><!-- end of .container-->
+      </div>
+
+      <!-- <script>
+        var filterElement = document.querySelector('[data-filter-nav]');
+        filterElement === null || filterElement === void 0 ? void 0 : filterElement.addEventListener('click', function (
+          e) {
+          console.log("clicou");
+        });
+      </script> -->
     </section>
 
     <!-- PARCEIROS -->
@@ -650,12 +678,11 @@
   <script src="vendors/bootstrap/bootstrap.min.js"></script>
   <script src="vendors/anchorjs/anchor.min.js"></script>
   <script src="vendors/is/is.min.js"></script>
-  <script src="vendors/isotope-layout/isotope.pkgd.min.js"> </script>
-  <script src="vendors/isotope-packery/packery-mode.pkgd.min.js"> </script>
+  <script src="vendors/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="vendors/isotope-packery/packery-mode.pkgd.min.js"></script>
   <script src="vendors/swiper/swiper-bundle.min.js"></script>
-  <script src="vendors/bigpicture/BigPicture.js"> </script>
-  <script src="vendors/rellax/rellax.min.js"> </script>
-  <script src="vendors/countup/countUp.umd.js"> </script>
+  <script src="vendors/bigpicture/BigPicture.js"></script>
+  <script src="vendors/rellax/rellax.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAZ1YjNbWcVAprk03nIOeIVydwK6y0YPc&callback=initMap"
     async></script>
   <script src="vendors/fontawesome/all.min.js"></script>
@@ -664,17 +691,7 @@
   <script src="vendors/imagesloaded/imagesloaded.pkgd.js"></script>
   <script src="vendors/gsap/gsap.js"></script>
   <script src="vendors/gsap/customEase.js"></script>
-  <script src="vendors/gsap/drawSVGPlugin.js"></script><!-- Global site tag (gtag.js) - Google Analytics-->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-122907869-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-122907869-1');
-  </script>
+  <script src="vendors/gsap/drawSVGPlugin.js"></script>
   <script src="assets/js/theme.js"></script>
 </body>
 
