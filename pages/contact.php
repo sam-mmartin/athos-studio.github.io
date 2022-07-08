@@ -163,14 +163,14 @@
                   </a>
                 </div>
                 <h3 class="mt-7">Fale conosco</h3>
-                <form class="mt-4" method="POST">
-                  <input class="form-control mt-3" type="text" placeholder="Seu Nome"
+                <form class="mt-4" action="../send-email.php" name="sender" method="POST">
+                  <input class="form-control mt-3" name="name" type="text" placeholder="Seu Nome"
                     aria-label="Text input with dropdown button" />
-                  <input class="form-control mt-3" type="email" placeholder="Seu E-mail"
+                  <input class="form-control mt-3" name="email" type="email" placeholder="Seu E-mail"
                     aria-label="Text input with dropdown button" />
-                  <input class="form-control mt-3" type="text" placeholder="Seu Celular"
+                  <input class="form-control mt-3" name="phone" type="text" placeholder="Seu Celular"
                     aria-label="Text input with dropdown button" />
-                  <textarea class="form-control mt-3" rows="11" placeholder="Sua Mensagem"
+                  <textarea class="form-control mt-3" name="message" rows="11" placeholder="Sua Mensagem"
                     required="required"></textarea>
                   <div class="d-grid">
                     <button class="btn btn-block btn-dark mt-4" type="submit">
@@ -233,6 +233,30 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal fade fade-in" id="emailSuccessModal" tabindex="-1" role="dialog"
+    aria-labelledby="emailSuccessModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="emailModalLabel">Modal Title</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="btn-close">
+            <span class="fw-light" aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <?php if (isset($_REQUEST['success'])){
+            echo "<p>$response</p>"
+          }
+          ?>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">Close</button>
+          <button class="btn btn-primary btn-sm" type="button">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- JavaScripts -->
   <script src="../vendors/popper/popper.min.js"></script>
