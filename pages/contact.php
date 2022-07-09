@@ -91,7 +91,7 @@
           </div>
         </li>
         <li class="fancynav-item">
-          <a class="fancynav-link" href="contact.html">
+          <a class="fancynav-link" href="contact.php">
             <span class="fancynav-link-content">Contato</span>
           </a>
         </li>
@@ -162,14 +162,19 @@
                     <span class="fab fa-pinterest" data-fa-transform="grow-6"></span>
                   </a>
                 </div>
+                
                 <h3 class="mt-7">Fale conosco</h3>
-                <form class="mt-4" action="../send-email.php" name="sender" method="POST">
+                <?php if (isset($_GET['status'])){
+                  echo '<p class="fw-normal mt-3">'.$_GET['status']."</p>";
+                }?>
+                
+                <form class="mt-4" action="send-email.php" name="sender" method="POST">
                   <input class="form-control mt-3" name="name" type="text" placeholder="Seu Nome"
-                    aria-label="Text input with dropdown button" />
+                    aria-label="Text input with dropdown button" required="required"/>
                   <input class="form-control mt-3" name="email" type="email" placeholder="Seu E-mail"
-                    aria-label="Text input with dropdown button" />
+                    aria-label="Text input with dropdown button" required="required"/>
                   <input class="form-control mt-3" name="phone" type="text" placeholder="Seu Celular"
-                    aria-label="Text input with dropdown button" />
+                    aria-label="Text input with dropdown button" required="required"/>
                   <textarea class="form-control mt-3" name="message" rows="11" placeholder="Sua Mensagem"
                     required="required"></textarea>
                   <div class="d-grid">
@@ -245,10 +250,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <?php if (isset($_REQUEST['success'])){
-            echo "<p>$response</p>"
-          }
-          ?>
+          
         </div>
         <div class="modal-footer">
           <button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">Close</button>
